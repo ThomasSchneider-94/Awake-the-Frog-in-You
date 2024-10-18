@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awake the Frog in You</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: black;
+        }
+
+        /* Game over panel styling */
+        #gameOverPanel {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        #retryButton {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #retryButton:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <!-- Game Over Panel -->
+    <div id="gameOverPanel">
+        <h2>Game Over</h2>
+        <p>Your score: <span id="finalScore">0</span></p>
+        <button id="retryButton">Retry</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
